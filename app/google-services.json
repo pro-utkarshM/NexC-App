@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "565082524446",
+    "project_id": "chatappmvp-2f65a",
+    "storage_bucket": "chatappmvp-2f65a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565082524446:android:3a34d885c29f9692d6170f",
+        "android_client_info": {
+          "package_name": "com.example.nittalk.ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565082524446-ns1svfkvbo3ogvb69gf6lu6pid3opq85.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nittalk.ui",
+            "certificate_hash": "a4a4dc43fa85cdcfd964253f337c31d038e1942f"
+          }
+        },
+        {
+          "client_id": "565082524446-l68ivp5cc1idc4dhtp74nm7rra3oplg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWLBfKI9h5xmTb5WytrIIqxdHMyBYt6wI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565082524446-l68ivp5cc1idc4dhtp74nm7rra3oplg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

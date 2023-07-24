@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/groupChatFragment">
+
+    <fragment
+        android:id="@+id/groupChatFragment"
+        android:name="com.example.nittalk.ui.groupchat.GroupChatFragment"
+        android:label="fragment_group_chat"
+        tools:layout="@layout/fragment_group_chat" >
+        <action
+            android:id="@+id/action_groupChatFragment_to_friendChatFragment"
+            app:destination="@id/inboxFragment" />
+        <action
+            android:id="@+id/action_groupChatFragment_to_createServerFragment"
+            app:destination="@id/createServerFragment" />
+        <action
+            android:id="@+id/action_groupChatFragment_to_inviteMemberFragment"
+            app:destination="@id/inviteMemberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.example.nittalk.ui.inbox.InboxFragment"
+        android:label="fragment_friend_chat"
+        tools:layout="@layout/fragment_inbox" >
+        <action
+            android:id="@+id/action_inboxFragment_to_friendFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_inboxFragment_to_friendChatFragment"
+            app:destination="@id/friendChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.nittalk.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.nittalk.ui.search.SearchFragment"
+        android:label="fragment_friend"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_friendFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_friendChatFragment"
+            app:destination="@id/friendChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendChatFragment"
+        android:name="com.example.nittalk.ui.inbox.FriendChatFragment"
+        android:label="fragment_friend_chat"
+        tools:layout="@layout/fragment_friend_chat" >
+        <argument
+            android:name="friendId"
+            app:argType="string" />
+        <argument
+            android:name="friendName"
+            app:argType="string" />
+        <argument
+            android:name="lastMessage"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.nittalk.ui.editprofile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/editProfileFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="user"
+            app:argType="com.example.nittalk.data.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/createServerFragment"
+        android:name="com.example.nittalk.ui.server.CreateServerFragment"
+        android:label="fragment_create_server"
+        tools:layout="@layout/fragment_create_server" >
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/inviteMemberFragment"
+        android:name="com.example.nittalk.ui.invite.InviteMemberFragment"
+        android:label="fragment_invite_member"
+        tools:layout="@layout/fragment_invite_member" >
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.nittalk.data.User" />
+        <argument
+            android:name="group"
+            app:argType="com.example.nittalk.data.Group" />
+    </fragment>
+</navigation>
